@@ -1,0 +1,10 @@
+.default-color{
+    color:black;
+    font-weight: 900;
+}
+.item{
+    padding:5% 
+}
+.item-left{
+gap:2%
+}

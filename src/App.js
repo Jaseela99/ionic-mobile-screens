@@ -25,31 +25,33 @@ import {  IonApp,
   import {BiSupport} from "react-icons/bi"
   import {MdMoreHoriz} from "react-icons/md"
 import Router from "./Router"
+import Header from "./Components/Header"
 setupIonicReact()
 function App() {
 
   return (
     <IonApp>
+      <Header/>
 <Router/>
     <IonTabBar slot="bottom">
     <IonTabButton tab="home" href="/home" className='icon-color'>
-      <RiHome2Line size={30} />
+      <RiHome2Line size={25} />
       <IonLabel >Home</IonLabel>
     </IonTabButton>
     <IonTabButton tab="billing" href="/billing"  className='icon-color'>
-    <TbFileDollar size={30}/>
+    <TbFileDollar size={25}/>
       <IonLabel>Billing</IonLabel>
     </IonTabButton>
     <IonTabButton tab="account" href="/account"  className='icon-color'>
-    <VscAccount size={30}/>
+    <VscAccount size={25}/>
       <IonLabel>Account</IonLabel>
     </IonTabButton>
     <IonTabButton tab="support" href="/support"  className='icon-color'>
-    <BiSupport size={30}/>
+    <BiSupport size={25}/>
       <IonLabel>Support</IonLabel>
     </IonTabButton>
     <IonTabButton tab="more" href="/more"  className='icon-color'>
-    <MdMoreHoriz size={30}/>
+    <MdMoreHoriz size={25}/>
       <IonLabel>More</IonLabel>
     </IonTabButton>
   </IonTabBar>
