@@ -1,26 +1,23 @@
 import React from "react";
 import "./Home.css";
-import {
-  IonContent,
-  IonItem,
-  IonList,
-  IonLabel,
-  IonButton,
-} from "@ionic/react";
+import { IonContent, IonItem, IonList, IonLabel } from "@ionic/react";
+import MakePayment from "../Components/MakePayment";
+import Header from "../Components/Header";
 import { MdOutlineNetworkWifi } from "react-icons/md";
 import { MdOutlineSpeed } from "react-icons/md";
-import { AiOutlineDollar } from "react-icons/ai";
+
 const Home = () => {
   return (
     <IonContent>
+      <Header name="Ziply" />
       <IonList>
         <IonItem>
-          <IonLabel className="item">
+          <IonLabel style={{padding:"5%"}}>
             <h1 style={{ fontWeight: 800 }}>Hi Victoria</h1>
             <h6 style={{ fontWeight: 800 }}>Friday,October 14</h6>
           </IonLabel>
         </IonItem>
-        <IonItem>
+        <IonItem style={{padding:"5%"}}>
           <div
             style={{
               display: "flex",
@@ -38,7 +35,7 @@ const Home = () => {
                   color: "white",
                 }}
               >
-                <MdOutlineNetworkWifi size={32} />
+                <MdOutlineNetworkWifi size={32} slot="start" />
               </div>
               <IonLabel>
                 <p>Network Status</p>
@@ -56,7 +53,7 @@ const Home = () => {
                   color: "grey",
                 }}
               >
-                <MdOutlineSpeed size={30} />
+                <MdOutlineSpeed size={30} slot="end" />
               </div>
               <IonLabel>
                 <p>Last Speed Test</p>
@@ -69,36 +66,24 @@ const Home = () => {
           </div>
         </IonItem>
         <IonItem>
-          <IonLabel>
-            <p style={{ marginBottom: "4%" }}>My Payments</p>
-            <p style={{ fontWeight: 800, color: "black" }}>
-              Ziply fiber Gig Internet
-            </p>
-            <h3 style={{ fontWeight: 800 }}>
-              <span style={{ fontSize: "40px" }}>$60</span>.00
-            </h3>
-            <h3>
-              <AiOutlineDollar />
-              AutoPay scheduled for oct 18
-            </h3>
-            <p style={{ color: "green" }}>Manage AutoPay</p>
-            <IonButton expand="block" color="success" shape="round">
-              Make a payment
-            </IonButton>
-          </IonLabel>
+          <MakePayment />
         </IonItem>
-        <IonItem>
+        <IonItem style={{padding:"5%"}}>
           <IonLabel>
             <p>Special Offer</p>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div style={{ width: "40%" ,paddingRight:"2%"}}>
-                <p style={{ fontWeight: 800,fontSize:"15px" }}>
+              <div style={{ width: "40%", paddingRight: "2%" }}>
+                <p style={{ fontWeight: 800, fontSize: "15px" }}>
                   Add Ziply Fiber Voice for just $20/mo
                 </p>
                 <p> Lorem epsum dolor sit</p>
               </div>
-              <div style={{width: "40%", height: "2%" }}>
-                <img  style={{borderRadius: "4px"}} src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63641.jpg?w=2000" />
+              <div style={{ width: "40%", height: "2%" }}>
+                <img
+                  style={{ borderRadius: "4px" }}
+                  alt="gray"
+                  src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63641.jpg?w=2000"
+                />
               </div>
             </div>
           </IonLabel>
